@@ -1,0 +1,16 @@
+---
+layout: layouts/default.njk
+header: Portfolio
+---
+<div class="flexgallery">
+    {% for portfolio in collections.portfolio %}
+        <div class="flexgallery-item">
+            <a href="{{ portfolio.url }}"> 
+                <img class="galleryimg" src="{{ portfolio.data.cardImage }}">
+                <p class="desc"> {{ portfolio.data.header }} </p>
+            </a>
+        </div>
+    {% endfor %}  
+</div>
+
+{% include "partials/breadcrumbs.njk" ignore missing %}

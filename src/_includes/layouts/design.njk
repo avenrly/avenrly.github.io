@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" href="../../css/style.css">
+    </head>
+    <body>
+        <div class="container"> 
+            <div class="banner">
+                <h1> {{ header }} </h1>
+            </div>
+        <main>
+            <br>
+            <br>
+            {% include "partials/breadcrumbs.njk" ignore missing %}
+            <div class="flexcontainer">
+                <div class="sidebar">
+                    <div class="nav">
+                        <ul>
+                    {% for portfolio in collections.portfolio %}
+                    <li>
+                        <a href="{{ portfolio.url }}"> 
+                        {{ portfolio.data.header }}
+                        </a>
+                        </li>
+                        {% endfor %}  
+                        </ul>
+                    </div>
+                </div>
+                <div class="meat">
+                    <div class="contentblock">
+                    <div class="item-data">
+                    
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Date:</th>
+                                    <td>{{date}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    
+                        {{ content | safe }}
+                    </div>
+                    {% include "partials/image-folder.njk" ignore missing %}
+                    </div>
+                </div>
+                
+            </div>
+            
+            <br>
+            <br>
+
+        </main>
+        {% include "partials/breadcrumbs.njk" ignore missing %}
+        </div>
+        
+    </body>
+</html>

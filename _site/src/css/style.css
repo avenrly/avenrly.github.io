@@ -1,0 +1,95 @@
+/* Fonts */
+
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=New+Rocker&family=Source+Code+Pro:ital,wght@1,300&display=swap');
+
+
+/*<weight>: Use a value from 200 to 900
+ <uniquifier>: Use a unique and descriptive class name
+ 
+ .source-code-pro-<uniquifier> {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+}
+  
+// <weight>: Use a value from 200 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.inconsolata-<uniquifier> {
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+*/
+
+.new-rocker-regular {
+    font-family: "New Rocker", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Styling */
+:root {
+    background-color: #FFFFFF;
+    --bg-image: url(images/bg/purple\ grid\ big.png);
+    --darkcolor: #a97dad;
+    --darkbgcolor: #6a5d5a;  
+    --lightcolor: #d9c5e1;
+    --lightbgcolor: #e0dceb;
+    --textcolor: #2b1c1c;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+body {
+    margin: 0;
+    cursor: url(cursors/espeon.gif), auto;
+    background-image: var(--bg-image);
+    background-size: 30px;
+    background-color: var(--darkbgcolor);
+    background-attachment: fixed;
+    font-family: "Inconsolata", monospace;
+    display:block;
+    color: var(--textcolor);
+    
+}
+
+p{
+    font-family: "Inconsolata", monospace;
+    font-size: 15px;
+    margin: auto;
+}
+
+h1 {
+    font-family: "New Rocker", system-ui;
+    font-size: 60px;
+
+}
+
+.container{
+    justify-content: center;
+    max-width: 1030px;
+    min-width: 1030px;
+    margin: auto;
+    border: 1px solid var(--textcolor);
+    background-color: var(--lightbgcolor);
+
+}
+
+.flexcontainer{
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 5px 0;
+    gap: 0px;
+}
+

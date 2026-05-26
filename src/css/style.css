@@ -1,0 +1,245 @@
+/* Fonts */
+
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=New+Rocker&family=Source+Code+Pro:ital,wght@1,300&display=swap');
+
+
+/*<weight>: Use a value from 200 to 900
+ <uniquifier>: Use a unique and descriptive class name
+ 
+ .source-code-pro-<uniquifier> {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+}
+  
+// <weight>: Use a value from 200 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.inconsolata-<uniquifier> {
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+*/
+
+.new-rocker-regular {
+    font-family: "New Rocker", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Styling */
+:root {
+    background-color: #FFFFFF;
+    --bg-image: url(../images/bg/purple-grid-big.png);
+    --darkcolor: #a97dad;
+    --darkbgcolor: #6a5d5a;  
+    --lightcolor: #d9c5e1;
+    --lightbgcolor: #e0dceb;
+    --textcolor: #2b1c1c;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+body {
+    margin: 0;
+    cursor: url(../images/cursors/espeon.gif), auto;
+    background-image: var(--bg-image);
+    background-size: 30px;
+    background-color: var(--darkbgcolor);
+    background-attachment: fixed;
+    font-family: "Inconsolata", monospace;
+    display:block;
+    color: var(--textcolor);
+    
+}
+
+p{
+    font-family: "Inconsolata", monospace;
+    font-size: 15px;
+    margin: auto;
+}
+
+h1 {
+    font-family: "New Rocker", system-ui;
+    font-size: 60px;
+
+}
+
+.nav{
+    margin: 5px;
+    border: 1px solid;
+    padding: 10px 10px;
+    background-color: var(--lightcolor);
+
+    h3{
+        padding: 0 14px;
+        font-size: 28px;
+        margin: 16px 0;
+        background-color: var(--darkcolor);
+        border: 1px solid var(--textcolor);
+        font-style: italic;
+        font-weight: 400;
+        text-align: center;
+        color: var(--textcolor);
+
+    }
+    ul{
+        padding-left: 30px;
+    }
+
+    li{
+        margin: 10px 0;
+        font-size: 15px;
+        list-style-type: none;
+        padding-left: 8px;
+        text-decoration: underline;
+        text-decoration-color: rgba(0, 0, 0, 0.2); /* 50% opacity black underline */
+    }
+
+    li::marker {
+        content: "⏾ |";
+        color: var(--textcolor);
+        font-size: 13px;
+        margin-right: 0px;
+    }
+    
+    a{
+        color: var(--textcolor);
+        text-decoration: none;
+    }
+}
+
+.container{
+    justify-content: center;
+    max-width: 1030px;
+    min-width: 1030px;
+    margin: auto;
+    border: 1px solid var(--textcolor);
+    background-color: var(--lightbgcolor);
+
+}
+
+
+
+.banner{
+    margin: 5px 5px 0 5px;
+    background-position: 20% 25%;
+    min-height: 150px;
+    max-height: 150px;
+    border: 1px solid var(--textcolor);
+    text-align: center;
+    color: #FFFFFF;
+    align-items: center;
+    background-color: var(--darkcolor);
+}
+
+.quotebox{
+    display: flex;
+    margin: 5px 5px 0 5px;
+    border: 1px solid var(--textcolor);
+    background-color: var(--darkcolor);
+    padding: 20px;
+    color: var(--textcolor);
+
+    
+}
+.calloutsymbol{
+        flex: 5%;
+        order: 1;
+        font-size: 35px;
+        margin: 0;
+    }
+    
+.callouttext{
+        flex:95%;
+        order: 2;
+        display: flex;
+        align-items: center;
+
+    }
+
+.contentblock{
+    margin: 5px 5px 5px 5px;
+    border: 1px solid var(--textcolor);
+    background-color:  var(--lightcolor);
+    padding: 10px;
+}
+
+
+.flexcontainer{
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 5px 0;
+    gap: 0px;
+}
+.sidebar{
+    flex: 25%;
+    order: 1;
+}
+
+.meat{
+    flex: 75%;
+    order: 2;
+}
+
+.flexgallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.flexgallery-item{
+    margin: 10px;
+    border: 1px solid var(--textcolor);
+    background-color: var(--darkcolor);
+    width: 450px;
+    max-height: 360px;
+    overflow: hidden;
+}
+
+.galleryimg{
+    width: 450px;
+    height: 310px;
+    overflow: hidden;
+    z-index: 0;
+    object-fit: cover;
+}
+
+.desc {
+    background-color: var(--darkcolor);
+    width: calc(100%-30px);
+    padding: 15px;
+    text-align: center;
+    z-index: 1;
+}
+
+.item-data {
+    margin: 10px;
+    table{
+        border-top: 1px dashed var(--textcolor);
+        border-bottom: 1px dashed var(--textcolor);
+        text-align: left;
+        margin: 10px 0 10px 0;
+    }
+    
+    th{
+        width: 20%;
+    }
+
+    td{
+        width: 80%;
+    }
+}

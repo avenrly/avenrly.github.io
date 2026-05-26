@@ -8,16 +8,13 @@
     </head>
     <body>
         <div class="container"> 
-            <div class="banner">
-                <h1> {{ header }} </h1>
-            </div>
+                
         <main>
-            <br>
-            <br>
             {% include "partials/breadcrumbs.njk" ignore missing %}
             <div class="flexcontainer">
                 <div class="sidebar">
                     <div class="nav">
+                    <h3>Work</h3>
                         <ul>
                     {% for portfolio in collections.portfolio %}
                     <li>
@@ -31,28 +28,46 @@
                 </div>
                 <div class="meat">
                     <div class="contentblock">
-                    <div class="item-data">
-                    
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <th>Date:</th>
-                                    <td>{{date}}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    
-                        {{ content | safe }}
-                    </div>
-                    {% include "partials/image-folder.njk" ignore missing %}
+                        <article>
+                        <h1> {{ header }} </h1>
+                        
+                        <div class="item-data">
+                        
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>Date:</th>
+                                        <td>{{year}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tags:</th>
+                                        <td> 
+                                            {% for tag in tags %}
+                                                {% if tag != "portfolio" %}
+                                                    {{ tag }},
+                                                {% endif %}
+                                            {% endfor %}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        
+                        </div>
+                        <p>{{ content | safe }}
+                        <br>
+                        {% if video %}
+
+                            <video class="project-video" controls>
+                                <source src="{{ video }}" type="video/mp4">
+                            </video>
+
+                        {% endif %}
+                        {% include "partials/image-folder.njk" ignore missing %}
+                        </article>
                     </div>
                 </div>
                 
             </div>
-            
-            <br>
-            <br>
-
         </main>
         {% include "partials/breadcrumbs.njk" ignore missing %}
         </div>

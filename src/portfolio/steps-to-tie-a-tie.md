@@ -1,11 +1,14 @@
 ---
-header: Steps To Tie a Tie
-cardImage: /images/portfolio/tieatie/homepage.png
-date: '2025'
+header: Complex Made Clear
+cardImage: /images/portfolio/tieatie/mockup.png
+cardPosition: center -47px
+imageFolder: images/portfolio/tieatie
+video: /images/portfolio/tieatie/walkthrough.mp4
+year: 2025
+tags:
+- 3D-modelling
+- website (figma)
 ---
-Desc
+The brief asked us to choose one of the provided plain-text instruction sets and transform it into a visually driven step-by-step guide. 
 
-<br>
-<video controls width="30%">
-<source src="/images/portfolio/tieatie/walkthrough.mp4" type="video/mp4">
-</video>
+I chose the task of tying a tie and approached it in figma, making a design of a mobile website.

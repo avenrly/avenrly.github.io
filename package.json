@@ -5,7 +5,8 @@
   "main": ".eleventy.js",
   "scripts": {
     "start": "npx eleventy --serve",
-    "build-ghpages": "npx @11ty/eleventy --pathprefix=/finch-nest/"
+    "build-ghpages": "npx @11ty/eleventy --pathprefix=/finch-nest/",
+    "build": "npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "",

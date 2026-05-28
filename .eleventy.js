@@ -54,6 +54,11 @@ config.addFilter("folderImages", function(folder) {
 
   });
 
+config.addCollection("portfolio", function(collectionApi) {
+return collectionApi.getFilteredByTag("portfolio")
+  .sort((a, b) => b.data.year - a.data.year);
+});
+
   return {
     dir: {
       input: 'src',

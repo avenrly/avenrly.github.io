@@ -3,7 +3,7 @@ layout: layouts/default.njk
 header: Portfolio
 ---
 <div class="gallery">
-    {% for portfolio in collections.portfolio | sort(attribute="data.year") | reverse %}
+    {% for portfolio in collections.portfolio %}
         <div class="gallery-item">
             <a href="{{ portfolio.url }}"> 
                 <img class="galleryimg" style="object-position: {{ portfolio.data.cardPosition or "center" }};"src="{{ portfolio.data.cardImage }}">

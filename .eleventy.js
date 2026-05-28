@@ -60,6 +60,7 @@ return collectionApi.getFilteredByTag("portfolio")
 });
 
   return {
+    pathPrefix: "/finch-nest/",
     dir: {
       input: 'src',
       output: 'dist',

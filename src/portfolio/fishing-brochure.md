@@ -1,6 +1,6 @@
 ---
 header: Fishing Brochure
-cardImage: /images/portfolio/fishingbrochure/fishingbrochure.png
+cardImage: /images/portfolio/fishingbrochure/fishingBrochure.png
 cardPosition: center
 imageFolder: images/portfolio/fishingbrochure
 year: 2025

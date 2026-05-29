@@ -299,7 +299,7 @@ a:hover{
     left: 10px;
     gap: 5px;
     transition: 150ms;
-
+    
     span{
         background-color: var(--accentcolor);
         padding: 8px;

@@ -2,6 +2,7 @@
 header: Convergence
 cardImage: /images/portfolio/convergence/Posters3.png
 cardPosition: bottom
+cardContain: contain
 imageFolder: images/portfolio/convergence
 video: /images/portfolio/convergence/WebsiteWalkthrough.mp4
 year: 2025

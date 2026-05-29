@@ -1,7 +1,7 @@
 ---
 header: MOSA (Museum of Sound Aotearoa)
 cardImage: "/images/portfolio/mosa/Brand-Guidelines01.jpg"
-cardPosition: center
+cardPosition: bottom
 imageFolder: images/portfolio/mosa
 year: 2026
 tags:

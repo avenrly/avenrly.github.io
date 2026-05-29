@@ -1,7 +1,7 @@
 ---
 header: Complex Made Clear
 cardImage: /images/portfolio/tieatie/mockup.png
-cardPosition: center -47px
+cardPosition: center
 imageFolder: images/portfolio/tieatie
 video: /images/portfolio/tieatie/walkthrough.mp4
 year: 2025

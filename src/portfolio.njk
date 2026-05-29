@@ -6,7 +6,8 @@ header: Portfolio
     {% for portfolio in collections.portfolio %}
         <div class="gallery-item">
             <a href="{{ portfolio.url }}"> 
-                <img class="galleryimg" style="object-position: {{ portfolio.data.cardPosition or "center" }};"src="{{ portfolio.data.cardImage }}">
+                <img class="galleryimg" style="object-position: {{ portfolio.data.cardPosition or "center" }}; 
+                    object-fit: {{portfolio.data.cardContain or "cover"}};"src="{{ portfolio.data.cardImage }}">
                 <p class="desc"> {{ portfolio.data.header }} </p>
             </a>
             <div class="tags">
@@ -19,5 +20,5 @@ header: Portfolio
         </div>
     {% endfor %}  
 </div>
-
+<br>
 {% include "partials/breadcrumbs.njk" ignore missing %}

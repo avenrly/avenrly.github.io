@@ -1,6 +1,7 @@
 ---
 header: Stewart Smith Illustrations
 cardImage: /images/portfolio/stewartsmith/13.png
+cardContain: contain
 cardPosition: bottom
 imageFolder: images/portfolio/stewartsmith
 year: 2026

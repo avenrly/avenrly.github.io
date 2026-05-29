@@ -269,6 +269,12 @@ a:hover{
         filter:brightness(30%);
         filter:opacity(70%);
     }
+    .desc{
+        bottom: 0px;
+    }
+    .tags{
+        bottom: 60px;
+    }
 
 }
 
@@ -280,7 +286,8 @@ a:hover{
     text-align: center;
     z-index: 1;
     font-size: medium;
-    bottom: 0px;
+    transition: 150ms;
+    bottom: -50px; 
 }
 
 .tags{
@@ -288,9 +295,10 @@ a:hover{
     display: flex;
     flex-wrap: wrap;
     z-index: 2;
-    bottom: 60px;
+    bottom: 10px;
     left: 10px;
     gap: 5px;
+    transition: 150ms;
 
     span{
         background-color: var(--accentcolor);

@@ -2,8 +2,13 @@ const fs = require("fs");
 const path = require("path");
 
 module.exports = config => {
-  config.addPassthroughCopy("./src/css");
-  config.addPassthroughCopy('./src/images/');
+  config.addPassthroughCopy({
+    "./src/css": "css"
+    });
+
+  config.addPassthroughCopy({
+    './src/images': 'images'
+  });
 
 config.addFilter("breadcrumbs", function(url) {
 
@@ -61,8 +66,10 @@ return collectionApi.getFilteredByTag("portfolio")
 
   return {
     dir: {
-      input: 'src',
+      input: 'src/content',
       output: 'dist',
+      layout: '../_includes/layouts',
+      includes:'../_includes',
     }
   };
 };

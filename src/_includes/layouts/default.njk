@@ -8,11 +8,16 @@
     </head>
     <body>
     <div class="container">
-        {% include "partials/header.njk" ignore missing %}
         <main>
-                <div class="banner">
-                    <h1> {{ header }} </h1>
-                </div>
+        {% if page.url == "/" %}
+        <div class="banner">
+             <h1>{{ header }}</h1>
+        </div>
+        {% else %}
+            {% include "partials/header.njk" ignore missing %}
+            <h1 class="title">{{ header }}</h1>
+        {% endif %}
+
                 {{ content | safe }}
             
         </main>

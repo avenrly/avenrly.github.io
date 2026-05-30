@@ -41,6 +41,7 @@
     --bgcolor: #cfcfcf;
     --textcolor: #141414;
     --accentcolor: #7f49b4;
+    --accent-rgb: 127, 73, 180;
 }
 
 html, body {
@@ -72,8 +73,11 @@ p{
 
 h1 {
     font-family: "Inconsolata";
-    font-size: 40px;
-
+    font-size: 70px;
+    text-transform: uppercase;
+    font-variation-settings:
+    "wdth" 120;
+    font-weight: 300;
 }
 
 a {
@@ -84,6 +88,9 @@ a:hover{
     color: var(--accentcolor);
 }
 
+.title{
+    border-bottom: 1px solid;
+}
 .page-header{
     display: inline-flex;
     justify-content: space-between;
@@ -174,6 +181,7 @@ a:hover{
     border: 1px solid var(--textcolor);
     padding: 20px;
     color: var(--textcolor);
+    background-color: rgba(var(--accent-rgb), 0.3);
 
     
 }

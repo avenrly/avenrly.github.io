@@ -80,6 +80,14 @@ h1 {
     font-weight: 300;
 }
 
+h3 {
+    background-color: rgba(var(--accent-rgb), 0.3);
+    border-bottom: 1px solid var(--textcolor);
+    font-style: italic;
+    font-weight: 400;
+    margin: -10px -10px 10px -10px;
+    padding: 10px 10px;
+}
 a {
     color: var(--textcolor);
 }
@@ -88,8 +96,28 @@ a:hover{
     color: var(--accentcolor);
 }
 
+table {
+    text-align: left;
+    margin: 10px;
+}
+
+tr{
+    font-size: 14px;
+}
+
+th {
+    vertical-align: top;
+    width: 20%;
+    padding: 5px 0px;
+}
+
+td{
+    width: 80%;
+    padding: 5px 0px;
+}
 .title{
     border-bottom: 1px solid;
+    margin: 30px 0px;
 }
 .page-header{
     display: inline-flex;
@@ -156,7 +184,6 @@ a:hover{
     padding: 30px;
     /* border: 1px solid var(--textcolor); */
     /*background-color: var(--lightbgcolor);*/
-
 }
 
 
@@ -203,11 +230,12 @@ a:hover{
 .contentblock{
     margin: 5px 5px 5px 5px;
     border: 1px solid var(--textcolor);
-    /* background-color:  var(--textcolor); */
     padding: 10px;
+
+    p{
+        margin: 10px;
+    }
 }
-
-
 
 
 .flexcontainer{
@@ -354,4 +382,32 @@ a:hover{
 .project-video{
     max-height: 700px;
     width:100%;
+}
+
+.grid-container{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1.6fr 1fr 1fr 1.6fr;
+    grid-template-rows: repeat(6, auto) 160px 160px;
+    gap: 10px;
+    max-height: calc(100vh - 100px);
+}
+
+.marquee{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+
+    img{
+        width: 80px;
+        object-fit: cover;
+    }
+}
+
+.square{
+    aspect-ratio: 1/1;
+}
+.pastel{
+    filter: brightness(1.15) contrast(0.8);
 }

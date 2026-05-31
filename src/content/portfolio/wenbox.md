@@ -1,6 +1,6 @@
 ---
 header: Wenbox
-cardImage: /images/portfolio/wenbox/Proposal.png
+cardImage: /images/portfolio/wenbox/Proposal01.png
 cardPosition: center
 imageFolder: images/portfolio/wenbox
 year: 2025

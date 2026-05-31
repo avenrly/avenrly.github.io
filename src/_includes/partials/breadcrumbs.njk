@@ -1,14 +1,14 @@
 <div class="contentblock" style="text-align: center;">
-  <a href="/">home</a> /
-{% set crumbs = page.url | breadcrumbs %}
+    <a href="/">home</a> /
+  {% set crumbs = page.url | breadcrumbs %}
 
-{% for crumb in crumbs %}
+  {% for crumb in crumbs %}
 
-<a href="{{ crumb.url }}">{{ crumb.name }}</a>
-{% if not loop.last %}
-/
-{% endif %}
+  <a href="{{ crumb.url }}">{{ crumb.name }}</a>
+  {% if not loop.last %}
+  /
+  {% endif %}
 
-{% endfor %}
+  {% endfor %}
 
-</div>
+  </div>

@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title> {{ title }} </title>
+        <title> {{ header }} </title>
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
@@ -15,7 +15,14 @@
         </div>
         {% else %}
             {% include "partials/header.njk" ignore missing %}
-            <h1 class="title">{{ header }}</h1>
+            {% if imgHero %}
+                <figure>
+                    <img class="img" src="{{ imgHero }}" alt tooltip="{{ imgCaption }}">
+                    <figcaption> {{ imgCaption }}) </figcaption>
+                </figure>
+            {% endif%}
+            
+            <h1 class="head">{{ header }}</h1>
         {% endif %}
 
                 {{ content | safe }}

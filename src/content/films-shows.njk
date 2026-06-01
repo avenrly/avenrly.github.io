@@ -1,0 +1,102 @@
+---
+layout: layouts/default.njk
+header: "Films & Shows"
+imgHero: /images/films-shows/better-days-screenshot.jpg
+imgCaption: Better Days (2019)
+---
+<div class="quotebox">
+    <p class="calloutsymbol">✧</p>
+    <div class="callouttext">
+        <p>
+            "That you are here - that life exists, and identity; that the 
+            powerful play goes on and you may contribute a verse. That the powerful play 
+            *goes on* and you may contribute a verse. What will your verse be?""
+                <b>- John Keating (Dead Poet Society)</b>
+        </p>
+    </div>
+</div>
+<div class="grid-container">
+    <div class="contentblock" style="grid-column: 1/4;">
+        <p> I love watching films and shows, I collect everything 
+            in a database on Notion like a personal letterbox. I love organising 
+            everything I've watched or want to watch, it's so satisfying :)</p>
+            <br>
+        <p> I was going to put my entire database on here but...it's a little too
+            complicated so here are just some highlights </p>
+            <br>
+            <br>
+        <h2> Favourites</h2>
+    {# Tab Links #}
+        <div class="tab">
+            <button class="tablinks" onClick="openTab(event, 'films')" id="defaultOpen">Films</button>
+            <button class="tablinks" onClick="openTab(event, 'shows')">Shows</button>
+        </div>
+    {# Tab Content #}
+        <div id="films" class="tabcontent">
+            <div class="film pastel">
+                {% for film in favourite.films %}
+                    <div class="item">
+                        <img src="/images/films-shows/{{ film.img }}" alt="{{ film.title }}">
+                        <div class="overlay">
+                            <p> {{ film.title }} ({{ film.year }})</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div id="shows" class="tabcontent">
+            <div class="film pastel">
+                {% for show in favourite.shows %}
+                    <div class="item">
+                        <img src="/images/films-shows/{{ show.img }}" alt="{{ show.title }}">
+                        <div class="overlay">
+                            <p> {{ show.title }} ({{ show.year }})</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="contentblock" style="overflow-y: auto; height: 746px;">
+        <h2> Recently Watched </h2>
+        {% for film in films | sort(attribute="date") | reverse%}
+            <div class="item">
+                <span class="date">{{ film.date }}</span>
+                <div class="item-info">
+                    <span class="title">{{film.title}}</span>
+                    <span class="rating">{{"★".repeat(film.rating)}}</span>
+                </div>
+                <div class="comment"> 
+                    <p>{{film.comment}} </p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+
+    function openTab(evt, tabName) {
+  // Declare all variables
+    const tablinks = document.getElementsByClassName("tablinks");
+    const tabcontent = document.getElementsByClassName("tabcontent");
+    var i;
+    // Get all elements with class="tablinks" and remove the class "active"
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+  
+    // Get all elements with class="tabcontent" and hide them
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("defaultOpen").click();
+});
+</script>

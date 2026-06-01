@@ -70,6 +70,7 @@ return collectionApi.getFilteredByTag("portfolio")
       output: 'dist',
       layout: '../_includes/layouts',
       includes:'../_includes',
+      data: '../_data',
     }
   };
 };

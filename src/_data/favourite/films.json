@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Carol",
+        "year": "2015",
+        "img": "carol.jpg"
+    },
+    {
+        "title": "Treasure Planet",
+        "year": "2002",
+        "img": "treasure-planet.jpg"
+    },
+    {
+        "title": "It Ends",
+        "year": "2019",
+        "img": "it-ends.jpg"
+    },
+    {
+        "title": "Dead Poet Society",
+        "year": "1989",
+        "img": "dead-poet-society.jpg"
+    },
+    {
+        "title": "Devil Wears Prada",
+        "year": "2006",
+        "img": "devil-wears-prada.jpg"
+    },
+    {
+        "title": "Garden of Words",
+        "year": "2013",
+        "img": "garden-of-words.jpg"
+    }
+
+
+]

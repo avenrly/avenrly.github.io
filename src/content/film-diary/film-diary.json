@@ -1,0 +1,5 @@
+{
+    "header": "Film Diary",
+    "layout": "layouts/film-diary-layout.njk",
+    "tags": "film-diary"
+}

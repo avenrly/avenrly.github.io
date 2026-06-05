@@ -3,16 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": ".eleventy.js",
-  "scripts": {
-    "start": "npx eleventy --serve",
-    "build-ghpages": "npx @11ty/eleventy --pathprefix=/finch-nest/",
-    "build": "npx @11ty/eleventy"
-  },
+"scripts": {
+  "fetch-notion": "node scripts/fetch-notion.js",
+  "start": "npm run fetch-notion && npx eleventy --serve",
+  "build-ghpages": "npm run fetch-notion && npx @11ty/eleventy --pathprefix=/finch-nest/",
+  "build": "npm run fetch-notion && npx @11ty/eleventy"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@11ty/eleventy": "^3.1.5"
+    "@11ty/eleventy": "^3.1.5",
+    "@notionhq/client": "^5.22.0",
+    "dotenv": "^17.4.2"
   }
 }

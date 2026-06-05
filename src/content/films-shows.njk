@@ -1,7 +1,7 @@
 ---
 layout: layouts/default.njk
 header: "Films & Shows"
-imgHero: /images/films-shows/better-days-screenshot.jpg
+imgHero: films-shows/better-days-screenshot.jpg
 imgCaption: Better Days (2019)
 ---
 <div class="quotebox">
@@ -59,18 +59,20 @@ imgCaption: Better Days (2019)
     </div>
     <div class="contentblock" style="overflow-y: auto; height: 746px;">
         <h2> Recently Watched </h2>
-        {% for film in films | sort(attribute="date") | reverse%}
-            <div class="item">
-                <span class="date">{{ film.date }}</span>
-                <div class="item-info">
-                    <span class="title">{{film.title}}</span>
-                    <span class="rating">{{"★".repeat(film.rating)}}</span>
+        {% set sorted = media | sort(false, false, "created") | reverse %}
+            {% for item in sorted.slice(0, 4) %}
+                <div class="item">
+                    <span class="date">{{ item.created }}</span>
+                    <div class="item-info">
+                        <span class="title">{{item.title}}</span>
+                        <span class="rating">{{"★".repeat(item.rating)}}</span>
                 </div>
                 <div class="comment"> 
-                    <p>{{film.comment}} </p>
+                    <p>{{item.comment}} </p>
                 </div>
             </div>
-        {% endfor %}
+            {% endfor %}
+    
     </div>
 </div>
 

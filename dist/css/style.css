@@ -562,3 +562,19 @@ figcaption{
         }
     }
 }
+
+.filters{
+
+    button{
+        display: inline-block;
+        border: none;
+        position: relative;
+        padding: 6px 12px;
+        background-color: rgba(var(--accent-rgb), 0.1);
+        margin: 0 5px 5px 0;
+        border-radius: 10px;
+    }
+    button.active{
+        background: rgba(var(--accent-rgb), 0.5);
+    }
+}

@@ -21,9 +21,9 @@ imgCaption: Better Days (2019)
             in a database on Notion like a personal letterbox. I love organising 
             everything I've watched or want to watch, it's so satisfying :)</p>
             <br>
-        <p> I was going to put my entire database on here but...it's a little too
-            complicated so here are just some highlights </p>
-            <br>
+        <p> Here's my whole film diary that pulls from my Notion database 
+        </p>
+        <p><a href="/film-diary/">/film-diary/</a></p>
             <br>
         <h2> Favourites</h2>
     {# Tab Links #}
@@ -59,7 +59,7 @@ imgCaption: Better Days (2019)
     </div>
     <div class="contentblock" style="overflow-y: auto; height: 746px;">
         <h2> Recently Watched </h2>
-        {% set sorted = media | sort(false, false, "created") | reverse %}
+        {% set sorted = media | sort(false, false, "created") %}
             {% for item in sorted.slice(0, 4) %}
                 <div class="item">
                     <span class="date">{{ item.created }}</span>

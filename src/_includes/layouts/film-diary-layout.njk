@@ -10,8 +10,8 @@ layout: layouts/default.njk
     </div>
     <div class="filters">
         <h3> Type </h3>
-        <button data-type="Movie">Movies</button>
-        <button data-type="Series">Series</button>
+        <button class="Movie" data-type="Movie">Movies</button>
+        <button class="Series" data-type="Series">Series</button>
         {# <h3> Tags </h3> 
         {% for tag in mediaTags %}
             <button data-tag="{{ tag }}">{{ tag }}</button>
@@ -23,12 +23,14 @@ layout: layouts/default.njk
             {% for item in sorted %}
                 {% if item.date and item.date.startsWith(year) %}
                         <div class="item" data-type="{{ item.type }}" data-tags="{{ item.tags }}" data-status="{{ item.status }}">
-                                    <span class="date">{{ item.date }}</span>
+                                    <span class="date">{{ item.date }} | </span> 
+                                    <span class="date">Watch Count: {{ item.watchCount}}</span>
                                     <div class="item-info">
                                         <span class="title">{{item.title}}</span>
                                         <span class="rating">{{"★".repeat(item.rating.length)}}</span>
+                                        <span class="type {{item.type}}">{{item.type}}</span>
                                     </div>
-                                    <div class="comment"> 
+                                    <div class="comment" style="padding: 5px;"> 
                                         <p>{{item.comment}} </p>
                                     </div>
                                 </div>

@@ -43,6 +43,7 @@
     --accentcolor: #7f49b4;
     --accent-rgb: 127, 73, 180;
     scrollbar-color: auto;
+    font-family: "Inconsolata", monospace;
 }
 
 html, body {
@@ -532,6 +533,7 @@ figcaption{
 
 .item{
     margin-bottom: 15px;
+    
     .date{
         font-size: small;
         font-weight: 300;
@@ -561,8 +563,25 @@ figcaption{
             font-size: smaller;
         }
     }
-}
+    .type{
+        display: inline-block;
+        border: none;
+        position: relative;
+        padding: 3px 8px;
+        
+        margin: 0 5px 5px 0;
+        border-radius: 10px;
+        font-size: small;
+    }
 
+    
+}
+.Movie{
+    background-color: rgba(209, 146, 138, 0.616);
+}
+.Series{
+    background-color: rgb(189, 171, 160);
+}
 .filters{
 
     button{
@@ -570,9 +589,9 @@ figcaption{
         border: none;
         position: relative;
         padding: 6px 12px;
-        background-color: rgba(var(--accent-rgb), 0.1);
         margin: 0 5px 5px 0;
         border-radius: 10px;
+        font-family: "Inconsolata", monospace;
     }
     button.active{
         background: rgba(var(--accent-rgb), 0.5);

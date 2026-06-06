@@ -32,7 +32,6 @@
                         <h1> {{ header }} </h1>
                         
                         <div class="item-data">
-                        
                             <table>
                                 <tbody>
                                     <tr>
@@ -51,9 +50,8 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        
                         </div>
-                        <p>{{ content | safe }}
+                        {{ content | safe }}
                         <br>
                         {% if video %}
 

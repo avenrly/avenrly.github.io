@@ -21,6 +21,11 @@ imgCaption: Better Days (2019)
             in a database on Notion like a personal letterbox. I love organising 
             everything I've watched or want to watch, it's so satisfying :)</p>
             <br>
+        <p> Currently watching: <i>{% for item in media %}
+            {% if item.status == "Watching" %}
+                {{ item.title }},
+                {% endif %}
+            {% endfor %}</i>
         <p> Here's my whole film diary that pulls from my Notion database 
         </p>
         <p><a href="/film-diary/">/film-diary/</a></p>

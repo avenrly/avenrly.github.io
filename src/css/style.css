@@ -399,13 +399,20 @@ li::marker {
     width:100%;
 }
 
-.grid-container{
+.grid-about{
     display: grid;
     position: relative;
     grid-template-columns: 1.6fr 1fr 1fr 1.6fr;
     grid-template-rows: repeat(6, auto) 160px 160px;
     gap: 10px;
     max-height: calc(100vh - 100px);
+}
+
+.grid-home{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1.6fr 1fr 1.6fr 1fr 1fr;
+    gap: 20px;
 }
 
 .marquee{
@@ -661,17 +668,11 @@ figcaption{
       transform: translateX(-100%);
     }
 }
-.flex{
+.flex-c{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-
-    .r{
-        flex-direction:row;
-    }
-    .c{
-        flex-direction: column;
-    }
+    flex-direction: column;
 }
 
 .barcode{

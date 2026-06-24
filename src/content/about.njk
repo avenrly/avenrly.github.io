@@ -76,7 +76,7 @@ header: "About"
     <div class="contentblock"style="grid-column: 1; grid-row: 3/4;">
         <h2> Favourite Shows </h2>
         <ul>
-            {% for show in favourite.shows %}
+            {% for show in favShows %}
                 <li>{{ show.title }}</li>
             {% endfor %}
         </ul>
@@ -84,7 +84,7 @@ header: "About"
     <div class="contentblock" style="grid-column: 2/4; grid-row: 3/4;">
         <h2> Favourite Movies </h2>
         <ul>
-            {% for film in favourite.films %}
+            {% for film in favFilms %}
                 <li>{{ film.title }}</li>
             {% endfor %}
         </ul>

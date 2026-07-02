@@ -1,0 +1,39 @@
+---
+layout: layouts/default.njk
+---
+<div class="note" style="width: 100%;">
+    <div class="window-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+    </div>
+    <div class="notetop">
+        
+        <button aria-label="Left"></button> <button aria-label="Right"></button>
+        <span class="address-bar">
+            ⏾ &#9658;
+            {% if header == "Shrines" %}
+                <span>Shrines</span> 
+            {% else %}
+                <a href="/shrines/">Shrines</a> &#9658; <span>{{ header }}</span>
+            </span>
+            {% endif %}
+    </div>
+
+    <div class="window-body flex">
+        <div class="leftbar">
+            <div class="nav">
+                <ul>
+                    {% for i in collections.shrines %}
+                        <li><a href="{{i.url}}">{{i.data.header}}</a></li>
+                    {%endfor%}
+                </ul>
+            </div>
+        </div>
+        <div class="rightbar">
+            <h1>{{header}}</h1>
+            {{ content }}
+        </div>
+        </div>
+    </div>
+</div>

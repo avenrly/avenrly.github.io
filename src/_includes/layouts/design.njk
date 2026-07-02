@@ -13,17 +13,19 @@
             {% include "partials/breadcrumbs.njk" ignore missing %}
             <div class="flexcontainer">
                 <div class="sidebar">
-                    <div class="nav">
-                    <h3>Work</h3>
-                        <ul>
-                    {% for portfolio in collections.portfolio %}
-                    <li>
-                        <a href="{{ portfolio.url }}"> 
-                        {{ portfolio.data.header }}
-                        </a>
-                        </li>
-                        {% endfor %}  
-                        </ul>
+                    <div class="contentblock">
+                        <div class="nav">
+                        <h3>Work</h3>
+                            <ul>
+                        {% for portfolio in collections.portfolio %}
+                        <li>
+                            <a href="{{ portfolio.url }}"> 
+                            {{ portfolio.data.header }}
+                            </a>
+                            </li>
+                            {% endfor %}  
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="meat">

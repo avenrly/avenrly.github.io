@@ -21,8 +21,11 @@
                     <figcaption> {{ imgCaption }} </figcaption>
                 </figure>
             {% endif%}
-            
-            <h1 class="head">{{ header }}</h1>
+            {% if "shrines" in page.url %}
+
+            {% else %}
+                <h1 class="head">{{ header }}</h1>
+            {% endif%}
         {% endif %}
 
                 {{ content | safe }}

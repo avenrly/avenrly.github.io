@@ -15,7 +15,9 @@ header: "AVENRLY"
 
     <div class="flexcontainer">
         <div class="sidebar">
+            <div class="contentblock">
             {% include "partials/index-nav.njk" ignore missing %}
+            </div>
         </div>
         <div class="meat">
             <div class="contentblock" style="padding: 20px">
@@ -26,14 +28,18 @@ header: "AVENRLY"
                             <div class="note">
                                 <h3>error</h3>
                                 <div class="smallnote">
-                                <p> Out of coffee. Reboot required.</p>
-                                <span class="notebutton">OK</span>
+                                    <div class="window-body">
+                                    <p> Out of coffee. Reboot required.</p>
+                                    <span class="notebutton">OK</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="note">
                                 <h3>notes.txt</h3>
                                 <div class="smallnote">
-                                <p > Genre: Comedy</p>
+                                    <div class="window-body">
+                                    <p > Genre: Comedy</p>
+                                    </div>
                                 </div>
                             </div>
                             </div>
@@ -42,10 +48,12 @@ header: "AVENRLY"
                     <div class="note" style="grid-column: 3/5;">
                         <h3>playing.flc</h3>
                         <div class="smallnote">
+                            <div class="window-body">
                             <div class="contentblock" style="padding: 0;">
                             <img  src="images/minidisc.jpg" style="width: 200px; margin: 5px;">
                             </div>
                         <p>Modern English - Melt With You</p>
+                        </div>
                         </div>
                     </div>
                     <div class="flex-c" style="grid-column: 5;">
@@ -54,15 +62,19 @@ header: "AVENRLY"
                 
                                 <h3>currently_playing</h3>
                             <div class="smallnote">
+                                <div class="window-body">
                                 <img  src="images/games/3582-days.jpg" style="width: 140px; margin: 5px;">
+                                </div>                            
                             </div>
                         </div>
                     </div>
                     
                     <div class="note"style="grid-column: 1/6;">
                         <h3>welcome.txt</h3>
+                        <div class="window-body">
                         <p> Hi, welcome to my little corner of the internet.This site is a constant work in progress, so apologies for any missing stuff.
                             I draw and stuff, i love films, tv shows and games.
+                        </div>
                     </div>
                 </div>
             </div>  

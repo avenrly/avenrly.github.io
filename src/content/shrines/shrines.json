@@ -1,0 +1,4 @@
+{
+    "layout": "layouts/shrine-layout.njk",
+    "tags": "shrines"
+}

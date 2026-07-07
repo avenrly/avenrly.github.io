@@ -18,6 +18,7 @@
             {% include "partials/header.njk" ignore missing %}
             {% if empty %} {# if the page wants a widscreen layout#}
                 </div>
+                <div class="full-container">
             {%endif%}
             {% if imgHero %}
                 <figure>
@@ -26,17 +27,17 @@
                 </figure>
             {% endif%}
             {% if "shrines" not in page.url %}
-            {% if not empty %}
-                <h1 class="head">{{ header }}</h1>
-            {% endif%}
+                {% if not empty %}
+                    <h1 class="head">{{ header }}</h1>
+                {% endif%}
             {%endif%}
         {% endif %}
 
                 {{ content | safe }}
             
         </main>
-    {% if not empty %}
+
     </div>
-    {%endif%}
+
     </body>
 </html>

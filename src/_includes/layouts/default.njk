@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
+    
     <div class="container">
         <main>
         {% if page.url == "/" %}
@@ -15,22 +16,27 @@
         </div>
         {% else %}
             {% include "partials/header.njk" ignore missing %}
+            {% if empty %} {# if the page wants a widscreen layout#}
+                </div>
+            {%endif%}
             {% if imgHero %}
                 <figure>
                     <img class="img" src="/images/{{ imgHero }}" alt tooltip="{{ imgCaption }}">
                     <figcaption> {{ imgCaption }} </figcaption>
                 </figure>
             {% endif%}
-            {% if "shrines" in page.url %}
-
-            {% else %}
+            {% if "shrines" not in page.url %}
+            {% if not empty %}
                 <h1 class="head">{{ header }}</h1>
             {% endif%}
+            {%endif%}
         {% endif %}
 
                 {{ content | safe }}
             
         </main>
+    {% if not empty %}
     </div>
+    {%endif%}
     </body>
 </html>

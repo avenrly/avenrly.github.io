@@ -1,5 +1,16 @@
 [
   {
+    "title": "Pleasantville",
+    "status": "Watched",
+    "tags": [],
+    "type": "Movie",
+    "rating": "⭐⭐⭐",
+    "comment": "Definitely had a good theme and was very impressive for the time it was made. So much so I was constantly wondering just how some of the special effects were made. The message was definitely hammered relentlessly, it was not subtle. But I enjoyed the film enough. ",
+    "watchCount": 1,
+    "streamingService": "Netflix",
+    "date": "2026-07-03"
+  },
+  {
     "title": "The Left-handed Girl",
     "status": "Watched",
     "tags": [

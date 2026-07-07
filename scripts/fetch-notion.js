@@ -29,7 +29,7 @@ async function fetchDatabase() {
   //FILTER OUT UNWATCHED
   const filteredResults = results.filter(page => {
     const status = page.properties.Status?.status?.name;
-    return status !== "Not started";
+    return status !== "Not started" && status !== "Dropped";
   });
 
   // (optional debug logs)

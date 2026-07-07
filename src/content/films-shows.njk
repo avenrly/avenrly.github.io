@@ -16,65 +16,68 @@ imgCaption: Better Days (2019)
     </div>
 </div>
 <div class="grid-about">
-    <div class="contentblock" style="grid-column: 1/4;">
-        <p> I love watching films and shows, I collect everything 
-            in a database on Notion like a personal letterbox. I love organising 
-            everything I've watched or want to watch, it's so satisfying :)</p>
-            <br>
-        <p> Currently watching: <i>{% for item in media %}
-            {% if item.status == "Watching" %}
-                {{ item.title }},
-                {% endif %}
-            {% endfor %}</i>
-        <p> Here's my whole film diary that pulls from my Notion database 
-        </p>
-        <p><a href="/film-diary/">/film-diary/</a></p>
-            <br>
-        <h2> Favourites</h2>
-    {# Tab Links #}
-        <div class="tab">
-            <button class="tablinks" onClick="openTab(event, 'films')" id="defaultOpen">Films</button>
-            <button class="tablinks" onClick="openTab(event, 'shows')">Shows</button>
+    <div style="grid-column: 1/4;">
+        <div class="contentblock">
+            <p> I love watching films and shows, I collect everything 
+                in a database on Notion like a personal letterbox. I love organising 
+                everything I've watched or want to watch, it's so satisfying :)</p>
+                <br>
+            <p> Currently watching: <i>{% for item in media %}
+                {% if item.status == "Watching" %}
+                    {{ item.title }},
+                    {% endif %}
+                {% endfor %}</i>
+            <p> Here's my whole film diary that pulls from my Notion database 
+            </p>
+            <p><a href="/film-diary/">/film-diary/</a></p>
         </div>
-    {# Tab Content #}
-        <div id="films" class="tabcontent">
-            <div class="film-tab pastel">
-                {% for film in favFilmsData %}
-                <div class="film">
-                    <div class="item">
-                        <img src="/images/films-shows/{{ film.img }}" alt="{{ film.title }}">
-                        <div class="overlay">
-                            <p> {{ film.title }} ({{ film.year }})</p>
-                        </div>
-                    </div>
-                    <div class="details">
-                        <p> Watch Counter: {{ film.watchCount }}
-                        <p> {{ film.comment }}
-                    </div>
-                </div>
-                {% endfor %}
+        <div class="contentblock">
+            <h2> Favourites</h2>
+        {# Tab Links #}
+            <div class="tab">
+                <button class="tablinks" onClick="openTab(event, 'films')" id="defaultOpen">Films</button>
+                <button class="tablinks" onClick="openTab(event, 'shows')">Shows</button>
             </div>
-        </div>
-        <div id="shows" class="tabcontent">
-            <div class="film-tab pastel">
-                {% for show in favShowsData %}
-                <div class="film">
-                    <div class="item" onClick="openDetails()">
-                        <img src="/images/films-shows/{{ show.img }}" alt="{{ show.title }}">
-                        <div class="overlay">
-                            <p> {{ show.title }} ({{ show.year }})</p>
+        {# Tab Content #}
+            <div id="films" class="tabcontent">
+                <div class="film-tab pastel">
+                    {% for film in favFilmsData %}
+                    <div class="film">
+                        <div class="item">
+                            <img src="/images/films-shows/{{ film.img }}" alt="{{ film.title }}">
+                            <div class="overlay">
+                                <p> {{ film.title }} ({{ film.year }})</p>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <p> Watch Counter: {{ film.watchCount }}
+                            <p> {{ film.comment }}
                         </div>
                     </div>
-                    <div class="details">
-                        <p> Watch Counter: {{ show.watchCount }}
-                        <p> {{ show.comment }}
-                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
+            </div>
+            <div id="shows" class="tabcontent">
+                <div class="film-tab pastel">
+                    {% for show in favShowsData %}
+                    <div class="film">
+                        <div class="item" onClick="openDetails()">
+                            <img src="/images/films-shows/{{ show.img }}" alt="{{ show.title }}">
+                            <div class="overlay">
+                                <p> {{ show.title }} ({{ show.year }})</p>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <p> Watch Counter: {{ show.watchCount }}
+                            <p> {{ show.comment }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
-    <div class="contentblock" style="overflow-y: auto; height: 746px;">
+    <div class="contentblock" style="overflow-y: auto; height: 776px;">
         <h2> Recently Watched </h2>
         {% set sorted = media | sort(false, false, "created") %}
             {% for item in sorted.slice(0, 4) %}

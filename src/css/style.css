@@ -2,7 +2,7 @@
 
 /*Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@50..200,200..900&family=Libre+Barcode+39+Text&family=Play:wght@400;700&display=swap');
-
+@import url('https://api.fontshare.com/v2/css?f[]=stardom@400&display=swap');
 
   
 /*
@@ -44,6 +44,12 @@
     --darkaccent: #472b7a;
     --accent-rgb: 127, 73, 180;
     --accent-light: #C7C1CC;
+    --gradient: linear-gradient(to right, 
+            rgba(var(--accent-rgb), 0.3), rgba(var(--accent-rgb), 0.5 ),
+            rgba(var(--accent-rgb), 0.3));
+    --box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
+    --box-glow: inset 0 0 2px 2px rgba(255, 255, 255, 0.2);
+    --white-glow-text: 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1);
     scrollbar-color: auto;
     font-family: "Inconsolata", monospace;
 }
@@ -69,29 +75,31 @@ body {
 }
 
 p{
-    font-family: "Inconsolata", monospace;
+    /* font-family: "Inconsolata", monospace; */
     font-size: 15px;
     line-height: 1.2;
     margin: auto;
 }
 
 h1 {
-    font-family: "Inconsolata";
+    /* font-family: "Inconsolata"; */
+    font-family: 'Tahoma', sans-serif;
     font-size: 70px;
     text-transform: uppercase;
-    font-variation-settings:
-    "wdth" 120;
-    font-weight: 300;
+    font-weight: 500;
+    letter-spacing: 4px;
 }
 
 h2 {
-    background-color: rgba(var(--accent-rgb), 0.3);
+    background: var(--gradient);
     border-bottom: 1px solid var(--textcolor);
     font-style: italic;
     font-weight: 400;
     margin: -10px -10px 20px -10px;
     padding: 10px 10px;
     font-size: 20px;
+    box-shadow: var(--box-glow);
+    text-shadow: var(--white-glow-text);
 }
 
 h2::before{
@@ -111,17 +119,17 @@ table {
 }
 
 tr{
-    font-size: 14px;
+    font-size: 15px;
 }
 
 th {
     vertical-align: top;
-    width: 20%;
+    width: 25%;
     padding: 5px 0px;
 }
 
 td{
-    width: 80%;
+    width: 75%;
     padding: 5px 0px;
 }
 
@@ -204,7 +212,7 @@ li::marker {
 
 
 .banner{
-    margin: 5px 5px 0 5px;
+    margin: 5px 5px 5px 5px;
     background-position: 20% 25%;
     min-height: 150px;
     max-height: 150px;
@@ -219,7 +227,7 @@ li::marker {
 
 .quotebox{
     display: flex;
-    margin: 5px 5px 0 5px;
+    margin: 5px 5px 0px 5px;
     border: 1px solid var(--textcolor);
     padding: 20px;
     color: var(--textcolor);
@@ -287,10 +295,13 @@ li::marker {
 
 /* GALLERY*/
 .gallery{
-    margin: 15px 5px 5px 5px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px
+    margin: -20px 20px 20px 20px;
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); */
+    gap: 80px 20px;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 
@@ -298,18 +309,18 @@ li::marker {
     border: 1px solid var(--textcolor);
     padding: 0;
     margin:0;
-    max-height: 360px;
     overflow: hidden;
     position: relative;
     box-sizing: border-box;
     transition: 150ms;
+    flex-grow: 1;
 }
 
 
 
 .galleryimg{
     width: 100%;
-    height: 100%;
+    max-height: 400px;
     overflow: hidden;
     z-index: 0;
     object-fit: cover;
@@ -317,6 +328,8 @@ li::marker {
 
 .gallery-item:hover{
     border: 3px solid var(--accentcolor);
+    margin: -2px;
+    
     .galleryimg{
         filter:brightness(30%);
         filter:opacity(70%);
@@ -647,13 +660,10 @@ figcaption{
 .note{
     border: 1px solid var(--textcolor);
     border-radius: 5px;
-    background: linear-gradient(to right, 
-            rgba(var(--accent-rgb), 0.3), rgba(var(--accent-rgb), 0.5 ),
-            rgba(var(--accent-rgb), 0.3));
+    background: var(--gradient);
     display: inline-block;
     position: relative;
-    box-shadow: inset 0 0 2px 2px rgba(255, 255, 255, 0.2), 
-                0 0 3px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow), var(--box-glow);
 
     .window-body{
         background-color: var(--accent-light);
@@ -778,12 +788,13 @@ figcaption{
     h3{
         border-bottom: 1px solid var(--textcolor);
         padding: 10px;
-        font-size: 15px;
+        font-size: 14px;
         margin: 0px;
-        font-weight: 400;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-family: 'Tahoma', sans-serif;
         color: var(--textcolor);
-        text-shadow: 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1);
-        /* background-color: rgba(var(--accent-rgb), 0.3); */
+        text-shadow: var(--white-glow-text);
         font-style: italic;
     }
     p{

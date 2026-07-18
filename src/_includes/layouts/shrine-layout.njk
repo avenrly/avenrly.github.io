@@ -32,8 +32,7 @@ layout: layouts/default.njk
         </div>
         <div class="rightbar">
             <h1>{{header}}</h1>
-            {{ content }}
-        </div>
+            {{ content | safe }}
         </div>
     </div>
 </div>

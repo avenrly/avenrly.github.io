@@ -1,5 +1,29 @@
 [
   {
+    "title": "Little Miss Sunshine",
+    "status": "Watched",
+    "tags": [],
+    "type": "Movie",
+    "rating": "⭐⭐⭐",
+    "comment": "Definitely a crazy and sweet little film. I feel for Dwayne ",
+    "watchCount": 1,
+    "streamingService": "Disney+",
+    "date": "2026-07-10"
+  },
+  {
+    "title": "Obsession",
+    "status": "Watched",
+    "tags": [
+      "🐺 Horror"
+    ],
+    "type": "Movie",
+    "rating": "⭐⭐⭐⭐",
+    "comment": "Its a great film….just KILL YOURSELF KILL YOURSELF FUCK YOU BEAR…..i knew this film was gonna make me mad. And it did. Objectively yeah, its a 4 star for me. But emotionally…justice for nikki -1 star",
+    "watchCount": 1,
+    "streamingService": "Pirate",
+    "date": "2026-07-09"
+  },
+  {
     "title": "Pleasantville",
     "status": "Watched",
     "tags": [],
@@ -250,19 +274,6 @@
     "watchCount": 1,
     "streamingService": "",
     "date": "2026-03-04"
-  },
-  {
-    "title": "Agatha Christie's Seven Dials",
-    "status": "Dropped",
-    "tags": [
-      "Helena Bonham Carter"
-    ],
-    "type": "Series",
-    "rating": "",
-    "comment": "hbc and Agatha christie. ",
-    "watchCount": 0,
-    "streamingService": "",
-    "date": "2026-02-11"
   },
   {
     "title": "Novacaine ",
@@ -574,19 +585,6 @@
     "watchCount": 1,
     "streamingService": "Netflix",
     "date": "2025-05-24"
-  },
-  {
-    "title": "The Wheel of Time",
-    "status": "Dropped",
-    "tags": [
-      "magic"
-    ],
-    "type": "Series",
-    "rating": "",
-    "comment": "the magic effects were just not for me",
-    "watchCount": 0,
-    "streamingService": "",
-    "date": "2025-06-02"
   },
   {
     "title": "Nezha 2",
@@ -1413,19 +1411,6 @@
     "date": "2024-10-10"
   },
   {
-    "title": "Kath and Kim",
-    "status": "Dropped",
-    "tags": [
-      "Comedy"
-    ],
-    "type": "Series",
-    "rating": "",
-    "comment": "",
-    "watchCount": 0,
-    "streamingService": "",
-    "date": "2025-04-07"
-  },
-  {
     "title": "Victor/Victoria",
     "status": "Watched",
     "tags": [
@@ -1727,19 +1712,6 @@
     "watchCount": 1,
     "streamingService": "Netflix",
     "date": "2024-08-17"
-  },
-  {
-    "title": "Taskmaster NZ",
-    "status": "Dropped",
-    "tags": [
-      "Comedy"
-    ],
-    "type": "Series",
-    "rating": "",
-    "comment": "",
-    "watchCount": 0,
-    "streamingService": "TVNZ",
-    "date": "2024-10-06"
   },
   {
     "title": "Doctor Sleep",
@@ -2316,17 +2288,6 @@
     "watchCount": 4,
     "streamingService": "Pirate",
     "date": "2024-06-08"
-  },
-  {
-    "title": "Sandman",
-    "status": "Dropped",
-    "tags": [],
-    "type": "Series",
-    "rating": "",
-    "comment": "gwendoline christie as lucifer morningstar is so hot",
-    "watchCount": 0,
-    "streamingService": "Netflix",
-    "date": "2024-10-06"
   },
   {
     "title": "Queen Charlotte (Bridgerton)",
@@ -3677,19 +3638,6 @@
     "date": "2023-01-27"
   },
   {
-    "title": "Bluey",
-    "status": "Dropped",
-    "tags": [
-      "Animation"
-    ],
-    "type": "Series",
-    "rating": "",
-    "comment": "",
-    "watchCount": 0,
-    "streamingService": "",
-    "date": "2024-10-06"
-  },
-  {
     "title": "D. E. B. S. ",
     "status": "Watched",
     "tags": [
@@ -4136,19 +4084,6 @@
     "date": "2023-03-10"
   },
   {
-    "title": "Little Demon",
-    "status": "Dropped",
-    "tags": [
-      "Animation"
-    ],
-    "type": "Series",
-    "rating": "",
-    "comment": "currently sort of mid",
-    "watchCount": 0,
-    "streamingService": "",
-    "date": "2023-12-09"
-  },
-  {
     "title": "Bloomington",
     "status": "Watched",
     "tags": [
@@ -4212,19 +4147,6 @@
     "watchCount": 1,
     "streamingService": "",
     "date": "2023-01-06"
-  },
-  {
-    "title": "Bravest Warriors",
-    "status": "Dropped",
-    "tags": [
-      "Animation"
-    ],
-    "type": "Series",
-    "rating": "",
-    "comment": "",
-    "watchCount": 0,
-    "streamingService": "",
-    "date": "2024-05-26"
   },
   {
     "title": "Everything Everywhere at once",
@@ -4665,19 +4587,6 @@
     "watchCount": 1,
     "streamingService": "",
     "date": "2025-03-08"
-  },
-  {
-    "title": "Mrs America",
-    "status": "Dropped",
-    "tags": [
-      "💛 Cate Blanchett"
-    ],
-    "type": "Series",
-    "rating": "",
-    "comment": "",
-    "watchCount": 0,
-    "streamingService": "",
-    "date": "2024-08-04"
   },
   {
     "title": "A Monster Calls",

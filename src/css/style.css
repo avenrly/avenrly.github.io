@@ -38,6 +38,24 @@
 :root {
     background-color: #FFFFFF;
     --bg-image: url(../images/bg/purple-grid-big.png);
+    --bgcolor: #e9e4bb;
+    --textcolor: #141414;
+    --accentcolor: #7f49b4;
+    --darkaccent: #472b7a;
+    --accent-rgb: 127, 73, 180;
+    --accent-light: #C7C1CC;
+    --gradient: linear-gradient(to right, 
+            rgba(var(--accent-rgb), 0.3), rgba(var(--accent-rgb), 0.5 ),
+            rgba(var(--accent-rgb), 0.3));
+    --box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
+    --box-glow: inset 0 0 2px 2px rgba(255, 255, 255, 0.2);
+    --white-glow-text: 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1);
+    scrollbar-color: auto;
+    font-family: "Inconsolata", monospace;
+}
+
+.garden {
+    --bg-image: url(../images/bg/purple-grid-big.png);
     --bgcolor: #cfcfcf;
     --textcolor: #141414;
     --accentcolor: #7f49b4;
@@ -52,6 +70,22 @@
     --white-glow-text: 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1);
     scrollbar-color: auto;
     font-family: "Inconsolata", monospace;
+
+    h2 {
+    background: var(--gradient);
+    border-bottom: 1px solid var(--textcolor);
+    font-style: italic;
+    font-weight: 400;
+    margin: -10px -10px 20px -10px;
+    padding: 10px 10px;
+    font-size: 20px;
+    box-shadow: var(--box-glow);
+    text-shadow: var(--white-glow-text);
+}
+
+h2::before{
+    content: "⏾ ";
+}
 }
 
 html, body {
@@ -90,21 +124,7 @@ h1 {
     letter-spacing: 4px;
 }
 
-h2 {
-    background: var(--gradient);
-    border-bottom: 1px solid var(--textcolor);
-    font-style: italic;
-    font-weight: 400;
-    margin: -10px -10px 20px -10px;
-    padding: 10px 10px;
-    font-size: 20px;
-    box-shadow: var(--box-glow);
-    text-shadow: var(--white-glow-text);
-}
 
-h2::before{
-    content: "⏾ ";
-}
 a {
     color: var(--textcolor);
 }

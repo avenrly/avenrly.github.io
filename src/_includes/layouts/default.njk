@@ -6,16 +6,20 @@
         <title> {{ header }} </title>
         <link rel="stylesheet" href="/css/style.css">
     </head>
-    <body>
+    <body {% if "garden" in page.url %} class="garden" {%endif%}>
     
     <div class="container">
         <main>
-        {% if page.url == "/" %}
+        {% if page.url == "/garden/" %}
         <div class="banner">
              <h1>{{ header }}</h1>
         </div>
         {% else %}
-            {% include "partials/header.njk" ignore missing %}
+            {% if "garden" in page.url %}
+                {% include "partials/header.njk" ignore missing %}
+            {%else%}
+                {% include "partials/portfolio-header.njk" ignore missing %}
+            {%endif%}
             {% if empty %} {# if the page wants a widscreen layout#}
                 </div>
                 <div class="full-container">

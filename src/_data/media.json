@@ -1,5 +1,18 @@
 [
   {
+    "title": "Spiderman: Into the Spiderverse",
+    "status": "Watched",
+    "tags": [
+      "Animation"
+    ],
+    "type": "Movie",
+    "rating": "⭐⭐⭐⭐⭐",
+    "comment": "This has got to be one of my favourite movies of all time. It's amazing. period. The first time I watched it in cinema was so memorable that I don't think I watched it since. But watching it again today. Wow. The music, the visuals, the storytelling across visuals and sound. I love Miles in this film way more than the second one. The characters feel so much more endearing, I'm not sure why. I love the little details, everything is just done so well. A masterpiece",
+    "watchCount": 2,
+    "streamingService": "",
+    "date": "2026-07-31"
+  },
+  {
     "title": "Little Miss Sunshine",
     "status": "Watched",
     "tags": [],
@@ -160,6 +173,19 @@
     "watchCount": 1,
     "streamingService": "Youtube",
     "date": "2026-03-11"
+  },
+  {
+    "title": "The Sixth Sense",
+    "status": "Watched",
+    "tags": [
+      "🐺 Horror"
+    ],
+    "type": "Movie",
+    "rating": "⭐⭐⭐⭐",
+    "comment": "BRO WAS NOT A HORROR but a sad heartwarming film… oh gosh oh gosh",
+    "watchCount": 1,
+    "streamingService": "Pirate",
+    "date": "2026-07-20"
   },
   {
     "title": "Tipping the Velvet",
@@ -3448,10 +3474,10 @@
     ],
     "type": "Movie",
     "rating": "⭐⭐⭐⭐",
-    "comment": "so fucking good looking! the celebration of all these different art styles for the different spidermen was fucking orgasmic. made me super hyped for the 3rd movie… cause the unconcluded ending lowkey bummed me out. ig i just didnt want it to end :C",
-    "watchCount": 1,
+    "comment": "so fucking good looking! the celebration of all these different art styles for the different spidermen was fucking orgasmic. made me super hyped for the 3rd movie… cause the unconcluded ending lowkey bummed me out. ig i just didnt want it to end :C \nI just rewatched it back to back with the first film and like it's definitely slower and drags a bit more. I think there's more emotional scenes that are visually amazing but overall as a film the first one just wins sorry",
+    "watchCount": 2,
     "streamingService": "Cinema",
-    "date": "2023-06-08"
+    "date": "2026-07-31"
   },
   {
     "title": "Sweeney Todd: The Demon Barber of Fleet Street",
@@ -4170,9 +4196,9 @@
     "type": "Movie",
     "rating": "⭐⭐⭐⭐⭐",
     "comment": "Angelina Jolie is so hot. fuck i love this film, so funny and cute",
-    "watchCount": 2,
+    "watchCount": 3,
     "streamingService": "",
-    "date": "2023-09-23"
+    "date": "2026-08-07"
   },
   {
     "title": "Bob's Burgers",

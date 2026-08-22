@@ -3,11 +3,46 @@ layout: layouts/default.njk
 header: "Avenrly"
 empty: empty
 ---
-<h1>Portfolio 2026</h1>
-<h3>Aven Li</h3>
+<p>
+CONNECT: <a href="mailto:rubyli208@gmail.com">rubyli208@gmail.com</a>
 
-<h2> Hi there!</h2>
-<p> I'm Aven Li, a Aotearoa-based graphic designer and artist who's passionate about
-    how design can tell stories and take steps towards creating a meaningful future.
+<script>
+    const background = document.querySelector(".home-background");
 
-{% include "partials/breadcrumbs.njk" ignore missing %}
+const images = [
+  "/images/portfolio/tieatie/mockup.png",
+  "/images/portfolio/mosa/Brand-Guidelines30.jpg",
+  "/images/portfolio/wenbox/Proposal17.png",
+  "/images/portfolio/stewartsmith/13.png",
+  "/images/portfolio/kaka/01.png",
+  "/images/portfolio/convergence/Posters.png",
+  "/images/portfolio/fishingbrochure/fishingBrochure5.png",
+];
+
+let currentImage = 0;
+
+// First image
+background.style.backgroundImage = `url(${images[currentImage]})`;
+
+setInterval(() => {
+  currentImage = (currentImage + 1) % images.length;
+
+  // Put the next image on top
+  background.style.setProperty(
+    "--next-image",
+    `url(${images[currentImage]})`
+  );
+
+  // Fade it in
+  background.classList.add("fade");
+
+  setTimeout(() => {
+    // Once faded in, make it the main background
+    background.style.backgroundImage = `url(${images[currentImage]})`;
+
+    // Instantly reset the top layer
+    background.classList.remove("fade");
+  }, 1500);
+
+}, 5000);
+  </script>

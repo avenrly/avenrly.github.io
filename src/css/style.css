@@ -36,9 +36,8 @@
 
 /* Styling */
 :root {
-    background-color: #FFFFFF;
     --bg-image: url(../images/bg/purple-grid-big.png);
-    --bgcolor: #e9e4bb;
+    --bgcolor: #cfcfcf;
     --textcolor: #141414;
     --accentcolor: #7f49b4;
     --darkaccent: #472b7a;
@@ -55,6 +54,7 @@
 }
 
 .garden {
+    cursor: url(../images/cursors/espeon.gif), auto;
     --bg-image: url(../images/bg/purple-grid-big.png);
     --bgcolor: #cfcfcf;
     --textcolor: #141414;
@@ -83,6 +83,8 @@
     text-shadow: var(--white-glow-text);
 }
 
+
+
 h2::before{
     content: "⏾ ";
 }
@@ -97,8 +99,7 @@ html, body {
 
 body {
     margin: 0;
-    cursor: url(../images/cursors/espeon.gif), auto;
-/*    background-image: var(--bg-image);*/
+    
     background-size: 30px;
     background-color: var(--bgcolor);
     background-attachment: fixed;
@@ -107,7 +108,33 @@ body {
     color: var(--textcolor);
     
 }
+.home-background {
+    position: relative;
 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.home-background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: var(--next-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    opacity: 0;
+    transition: opacity 1.5s ease;
+
+    pointer-events: none;
+}
+
+.home-background.fade::after {
+    opacity: 1;
+}
 p{
     /* font-family: "Inconsolata", monospace; */
     font-size: 15px;
@@ -330,6 +357,7 @@ li::marker {
 
 .gallery-item{
     border: 1px solid var(--textcolor);
+    outline: 3px solid transparent;
     padding: 0;
     margin:0;
     overflow: hidden;
@@ -337,6 +365,7 @@ li::marker {
     box-sizing: border-box;
     transition: 150ms;
     flex-grow: 1;
+    outline-offset: -1px;
 }
 
 
@@ -350,7 +379,7 @@ li::marker {
 }
 
 .gallery-item:hover{
-    border: 3px solid var(--accentcolor);
+    outline: 3px solid var(--accentcolor);
     margin: -2px;
     
     .galleryimg{

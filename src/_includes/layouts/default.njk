@@ -6,11 +6,17 @@
         <title> {{ header }} </title>
         <link rel="stylesheet" href="/css/style.css">
     </head>
-    <body {% if "garden" in page.url %} class="garden" {%endif%}>
+    <body {% if "garden" in page.url %} class="garden" {%endif%} {% if page.url == '/' %} class="home-background"{%endif%}>
     
-    <div class="container">
+    
+        {% if empty %} {# if the page wants a widscreen layout#}
+            <div class="full-container">
+        {% else %} {# else its just regular #}
+            <div class="container">
+        {%endif%}
+
         <main>
-        {% if page.url == "/garden/" %}
+        {% if page.url == "/garden/" %} {# for the banner title on garden#}
         <div class="banner">
              <h1>{{ header }}</h1>
         </div>
@@ -20,10 +26,7 @@
             {%else%}
                 {% include "partials/portfolio-header.njk" ignore missing %}
             {%endif%}
-            {% if empty %} {# if the page wants a widscreen layout#}
-                </div>
-                <div class="full-container">
-            {%endif%}
+            
             {% if imgHero %}
                 <figure>
                     <img class="img" src="/images/{{ imgHero }}" alt tooltip="{{ imgCaption }}">

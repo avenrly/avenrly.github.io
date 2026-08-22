@@ -17,13 +17,15 @@
                         <div class="nav">
                         <h3>Work</h3>
                             <ul>
-                        {% for portfolio in collections.portfolio %}
-                        <li>
-                            <a href="{{ portfolio.url }}"> 
-                            {{ portfolio.data.header }}
-                            </a>
-                            </li>
-                            {% endfor %}  
+                                {% for portfolio in collections.portfolio %}
+                                    {% if portfolio.url != "/portfolio/" %}
+                                        <li>
+                                            <a href="{{ portfolio.url }}"> 
+                                            {{ portfolio.data.header }}
+                                            </a>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}  
                             </ul>
                         </div>
                     </div>

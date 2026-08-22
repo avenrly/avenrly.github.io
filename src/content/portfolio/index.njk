@@ -6,22 +6,24 @@ empty: empty
 
 <div class="gallery">
     {% for portfolio in collections.portfolio %}
-        <div class="gallery-item">
-            <a href="{{ portfolio.url }}"> 
-                <img class="galleryimg" 
-                    style="object-position: {{ portfolio.data.cardPosition or 'center' }}; 
-                    object-fit: {{portfolio.data.cardContain or 'cover'}};" 
-                    src="{{ portfolio.data.cardImage }}">
-                <p class="desc"> {{ portfolio.data.header }} </p>
-            </a>
-            <div class="tags">
-                    {% for tag in portfolio.data.tags %}
-                        {% if tag != "portfolio" %}
-                        <span>{{ tag }}</span>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-        </div>
+        {% if portfolio.url != "/portfolio/" %}
+            <div class="gallery-item">
+                <a href="{{ portfolio.url }}"> 
+                    <img class="galleryimg" 
+                        style="object-position: {{ portfolio.data.cardPosition or 'center' }}; 
+                        object-fit: {{portfolio.data.cardContain or 'cover'}};" 
+                        src="{{ portfolio.data.cardImage }}">
+                    <p class="desc"> {{ portfolio.data.header }} </p>
+                </a>
+                <div class="tags">
+                        {% for tag in portfolio.data.tags %}
+                            {% if tag != "portfolio" %}
+                            <span>{{ tag }}</span>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+            </div>
+        {% endif %} 
     {% endfor %}  
 </div>
 <br>

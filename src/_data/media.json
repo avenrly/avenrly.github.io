@@ -1,5 +1,16 @@
 [
   {
+    "title": "The Mummy",
+    "status": "Watched",
+    "tags": [],
+    "type": "Movie",
+    "rating": "⭐⭐⭐",
+    "comment": "solid film, I enjoyed the collection of clichés and classic film charcatures. fun and a little scary at times. I liked the main couple  too, bookworm brittish and the gunslinging American ",
+    "watchCount": 1,
+    "streamingService": "Prime Video",
+    "date": "2026-08-22"
+  },
+  {
     "title": "Backrooms",
     "status": "Watched",
     "tags": [],
@@ -79,6 +90,21 @@
     "watchCount": 1,
     "streamingService": "Netflix",
     "date": "2026-07-03"
+  },
+  {
+    "title": "Teenage Sex and Death at Camp Miasma",
+    "status": "Watched",
+    "tags": [
+      "🌈 LGBTQ+",
+      "Gillian Anderson",
+      "Comedy"
+    ],
+    "type": "Movie",
+    "rating": "⭐⭐⭐",
+    "comment": "it's coming out in August, villain Anderson in a wlw slash horror age gap movie? count me in.\nJust watched it in cinemas, holy what a wild film. that shit was crazy, I had no idea what was gonna happen cause it was just so creative and insane.  There was so much sudden absurdity which was funny and the comedy was definitely the driving force of the film. The whole tone of the film was very nice too, it's a very attractive looking film. The last third of the film was definitely the strongest, I wasn't really feeling it in the first two thirds. There's a lot I feel like I don't really ‘get’ but not in a deep way but more of a meta commentary way.",
+    "watchCount": 1,
+    "streamingService": "Cinema",
+    "date": "2026-08-30"
   },
   {
     "title": "The Left-handed Girl",

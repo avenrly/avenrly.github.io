@@ -3,52 +3,59 @@ layout: layouts/default.njk
 header: "Avenrly"
 empty: empty
 ---
+<div class="home-background">
+  <div class="bg-image"></div>
+  <div class="bg-image"></div>
+</div>
 <p>
-CONNECT: <a href="mailto:rubyli208@gmail.com">rubyli208@gmail.com</a>
-
+CONNECT: <a href="mailto:rubyli208@gmail.com">rubyli208@gmail.com</a></p>
+<br>
+<p> I'm still developing this website, 
+<br>it's in early stages so please bear 
+<br>with the mess :)
 <script>
-    const background = document.querySelector(".home-background");
+  const images = [
+    "/images/portfolio/tieatie/mockup.png",
+    "/images/portfolio/mosa/Brand-Guidelines30.jpg",
+    "/images/portfolio/wenbox/Proposal17.png",
+    "/images/portfolio/stewartsmith/13.png",
+    "/images/portfolio/kaka/01.png",
+    "/images/portfolio/convergence/Posters.png",
+    "/images/portfolio/fishingbrochure/fishingBrochure5.png",
+  ];
 
-const images = [
-  "/images/portfolio/tieatie/mockup.png",
-  "/images/portfolio/mosa/Brand-Guidelines30.jpg",
-  "/images/portfolio/wenbox/Proposal17.png",
-  "/images/portfolio/stewartsmith/13.png",
-  "/images/portfolio/kaka/01.png",
-  "/images/portfolio/convergence/Posters.png",
-  "/images/portfolio/fishingbrochure/fishingBrochure5.png",
-];
+  const backgrounds = document.querySelectorAll(".bg-image");
 
-// Preload images
-images.forEach((src) => {
-  const img = new Image();
-  img.src = src;
-});
+  // Preload images
+  images.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
 
-let currentImage = 0;
+  let currentImage = 0;
+  let activeBackground = 0;
 
-// First image
-background.style.backgroundImage = `url(${images[currentImage]})`;
+  // Set the first image
+  backgrounds[0].style.backgroundImage = `url(${images[0]})`;
 
-setInterval(() => {
-  currentImage = (currentImage + 1) % images.length;
+  setInterval(() => {
+    // Move to next image
+    currentImage = (currentImage + 1) % images.length;
 
-  // Put the next image on top
-  background.style.setProperty(
-    "--next-image",
-    `url(${images[currentImage]})`
-  );
+    // Choose the background layer that's currently hidden
+    const nextBackground = backgrounds[1 - activeBackground];
 
-  // Fade it in
-  background.classList.add("fade");
+    // Set its image
+    nextBackground.style.backgroundImage = `url(${images[currentImage]})`;
 
-  setTimeout(() => {
-    // Once faded in, make it the main background
-    background.style.backgroundImage = `url(${images[currentImage]})`;
+    // Fade it in
+    nextBackground.style.opacity = "1";
 
-    // Instantly reset the top layer
-    background.classList.remove("fade");
-  }, 1500);
+    // Fade the old one out
+    backgrounds[activeBackground].style.opacity = "0";
 
-}, 5000);
-  </script>
+    // Swap active layer
+    activeBackground = 1 - activeBackground;
+
+  }, 5000);
+</script>

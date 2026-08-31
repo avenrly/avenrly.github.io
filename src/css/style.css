@@ -109,30 +109,22 @@ body {
     
 }
 .home-background {
-    position: relative;
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
 }
 
-.home-background::after {
-    content: "";
+.bg-image {
     position: absolute;
     inset: 0;
-
-    background-image: var(--next-image);
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
-
     opacity: 0;
-    transition: opacity 1.5s ease;
-
-    pointer-events: none;
+    transition: opacity 1.5s ease-in-out;
 }
 
-.home-background.fade::after {
+.bg-image:first-child {
     opacity: 1;
 }
 p{

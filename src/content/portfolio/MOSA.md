@@ -1,6 +1,6 @@
 ---
 header: MOSA (Museum of Sound Aotearoa)
-cardImage: "/images/portfolio/mosa/1 Tickets.png"
+cardImage: "/images/portfolio/mosa/1Tickets.png"
 cardPosition: bottom
 imageFolder: images/portfolio/mosa
 video: "/images/portfolio/mosa/mosa-logo.mp4"

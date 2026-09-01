@@ -6,7 +6,7 @@
         <title> {{ header }} </title>
         <link rel="stylesheet" href="/css/style.css">
     </head>
-    <body {% if "garden" in page.url %} class="garden" {%endif%} {% if page.url == '/' %} class="home-background"{%endif%}>
+    <body {% if "garden" in page.url %} class="garden"{%else%}class="portfolio" {%endif%}>
     
     
         {% if empty %} {# if the page wants a widscreen layout#}

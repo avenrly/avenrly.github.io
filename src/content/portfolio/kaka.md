@@ -1,8 +1,9 @@
 ---
 header: Data in Flight
-cardImage: /images/portfolio/kaka/biredno bubble.png
+cardImage: /images/portfolio/kaka/toggle/biredno bubble.png
 cardPosition: center
 imageFolder: images/portfolio/kaka
+gridNumber: 1
 year: 2025
 tags:
 - illustration

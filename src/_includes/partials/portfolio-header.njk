@@ -1,8 +1,8 @@
-<header class="page-header">
+<header class="portfolio-header">
     <nav>
-        <a href="/" class="header-logo">Aven Li</a>
-        <a href="/about/">About</a>
+        <a href="/" class="{% if page.url == '/' %} active-page{%endif%}" >Home</a>
+        <a href="/about/" {% if page.url == '/about/' %} class="active-page"{%endif%} >About</a>
         {# <a href="/contact/">Contact</a> #}
-        <a href="/portfolio/">Works</a>
+        <a href="/portfolio/"{% if page.url == '/portfolio/' %} class="active-page"{%endif%} >Works</a>
     </nav>
 </header>

@@ -79,10 +79,10 @@ imgCaption: Better Days (2019)
     </div>
     <div class="contentblock" style="overflow-y: auto; height: 776px;">
         <h2> Recently Watched </h2>
-        {% set sorted = media | sort(false, false, "created") %}
+        {% set sorted = media | sort(false, false, "date") |reverse %}
             {% for item in sorted.slice(0, 4) %}
                 <div class="item">
-                    <span class="date">{{ item.created }}</span>
+                    <span class="date">{{ item.date }}</span>
                     <div class="item-info">
                         <span class="title">{{item.title}}</span>
                         <span class="rating">{{"★".repeat(item.rating)}}</span>

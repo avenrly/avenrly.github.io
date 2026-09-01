@@ -4,11 +4,11 @@ cardImage: /images/portfolio/tieatie/mockup.png
 cardPosition: center
 imageFolder: images/portfolio/tieatie
 video: /images/portfolio/tieatie/walkthrough.mp4
+gridNumber: 1
 year: 2025
 tags:
 - 3D-modelling
-- website (figma)
+- UI/UX
+- Illustration
 ---
-The brief asked us to choose one of the provided plain-text instruction sets and transform it into a visually driven step-by-step guide. 
-
-I chose the task of tying a tie and approached it in figma, making a design of a mobile website.
+Developed a mobile website of step-by-step instructions which are clear and interesting in reponse to an information design brief. Created simple models in blender and created the website design on Figma.

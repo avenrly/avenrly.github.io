@@ -6,8 +6,8 @@ imageFolder: images/portfolio/fishingbrochure
 year: 2025
 tags:
 - illustration
-- type
+- Editorial
 ---
-The brief was to design a 12 page brochure to promote a series of three related recreational activities within the Greater Wellington region. Developing a visual system which ensures consistency, clarity and unity across different touchpoints.
+Responded to a brief to design a brochure to promote a recreational activity within the Greater Wellington region. Developing a visual system which ensures consistency, clarity and unity across different touchpoints.
 
 My chosen activity was fishing. All copy was provided.

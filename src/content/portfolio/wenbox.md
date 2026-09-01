@@ -1,14 +1,14 @@
 ---
 header: Wenbox
-cardImage: /images/portfolio/wenbox/Proposal01.png
+cardImage: /images/portfolio/wenbox/pdf/Proposal01.png
 cardPosition: center
 imageFolder: images/portfolio/wenbox
 year: 2025
 tags:
 - branding
-- type
+- editorial
 ---
-The brief asked us to develop a product concept and brand identity system for a new generation of food trucks in Wellington. The solution had to be stategically positioned, visually distinctive, and designed to stand out in Wellington's vibrant street food market, with the potential to have franchises nationally.
+Responded to a brand brief of developing a distinct brand identity system and product concept. The solution had to be stategically positioned, visually distinctive, and distinguish itself from other brands.
 
 The brand I developed is Wenbox, a Taiwanese lunchbox food truck with a focus on giving the customer choice while providing warmth and nourishment.
 

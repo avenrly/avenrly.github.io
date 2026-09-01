@@ -1,0 +1,67 @@
+---
+layout: layouts/default.njk
+empty: empty
+---
+            <div class="flexcontainer">
+                <div class="sidebar">
+                    <div class="contentblock project-nav">
+
+                        <h2>Other Projects</h2>
+                            <ul>
+                                {% for portfolio in collections.portfolio %}
+                                    {% if portfolio.url != "/portfolio/" %}
+                                        <li>
+                                            <a href="{{ portfolio.url }}"  {% if page.url == portfolio.url %} class="active" {%endif%}> 
+                                            {{ portfolio.data.header }}
+                                            </a>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}  
+                            </ul>
+                    
+                    </div>
+                </div>
+                <div class="meat">
+                    <div class="contentblock">
+                        <article>
+                        <h1> {{ header }} </h1>
+                        
+                        <div class="item-data">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>Date:</th>
+                                        <td>{{year}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tags:</th>
+                                        <td> 
+                                            {% for tag in tags %}
+                                                {% if tag != "portfolio" %}
+                                                    {{ tag }},
+                                                {% endif %}
+                                            {% endfor %}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="portfolio-desc">
+                            {{ content | safe }}
+                        </div>
+                        <br>
+
+                        {% include "partials/image-folder.njk" ignore missing %}
+                        {% if video %}
+
+                            <video class="project-video" controls>
+                                <source src="{{ video }}" type="video/mp4">
+                            </video>
+
+                        {% endif %}
+                        </article>
+                    </div>
+                </div>
+                
+            </div>
+        {% include "partials/breadcrumbs.njk" ignore missing %}

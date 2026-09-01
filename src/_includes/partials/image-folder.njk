@@ -1,9 +1,17 @@
 {% set images = (imageFolder | folderImages) %}
 
 {% if images.length %}
-
+<div class="project-img-grid 
+{% if gridNumber == '3' %} three-grid 
+{%elseif gridNumber== '1'%} one-grid
+{%else%} two-grid 
+{%endif%}">
     {% for image in images %}
-        <img style="width: 100%; padding-bottom: 50px;"src="{{ image }}">
+        <div class="project-img-item">
+            <a href="{{ image }}" target="_blank">
+            <img class="project-img-img" src="{{ image }}">
+            </a>
+        </div>
     {% endfor %}
-
+</div>
 {% endif %}
